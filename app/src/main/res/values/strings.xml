@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Test Android</string>
+    <string name="click_me">Click Me!</string>
+</resources>
