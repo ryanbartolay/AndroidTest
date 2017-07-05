@@ -11,7 +11,7 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
+    private Button button, login_form_button;
     private ToggleButton toggleButton;
 
     @Override
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button = (Button) findViewById(R.id.button);
+        login_form_button = (Button) findViewById(R.id.login_button);
         toggleButton = (ToggleButton) findViewById(R.id.toggleButton);
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -27,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Hello World", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        login_form_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
